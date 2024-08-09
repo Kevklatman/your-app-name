@@ -9,7 +9,7 @@ function App() {
         <Header />
       </header>
       <main>
-        <Body />
+        <Body/>
       </main>
     </div>
   );
