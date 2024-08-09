@@ -11,7 +11,9 @@ function Body() {
       <div className="image-grid">
         {characters.map((character) => (
           <div key={character._id}>
-            <img className='image' src={character.img} alt={`${character.firstname} ${character.lastname}`} />
+            <button className="button-image">          
+                <img className='image' src={character.img} alt={`${character.firstname} ${character.lastname}`} />
+            </button>
             <p>{character.firstname} {character.lastname}</p>
           </div>
         ))}
