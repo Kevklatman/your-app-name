@@ -97,7 +97,7 @@ h2{
     padding: 0;
     background: none;
     border: none;
-    cursor: pointer;
+    cursor:pointer;
     transition: transform 0.3s ease;
   }
   
@@ -109,4 +109,31 @@ h2{
     display: block;
     width: 100%;
     height: auto;
+  }
+  .character-item {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .character-item img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  
+  .character-item .quote {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    font-size: 14px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .character-item:hover .quote {
+    opacity: 1;
   }
