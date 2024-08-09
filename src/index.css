@@ -7,3 +7,39 @@ header{
 h1{
     font-weight: bolder;
 }
+.characters {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  h2 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .image-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-gap: 20px;
+  }
+  
+  .character {
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 4px;
+    text-align: center;
+  }
+  
+  .character img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin-bottom: 10px;
+  }
+  
+  .character p {
+    font-size: 18px;
+    font-weight: bold;
+  }

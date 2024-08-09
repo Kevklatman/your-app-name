@@ -1,15 +1,16 @@
-
 import './index.css';
-import Component from './component';
+import Header from './Header';
+import Body from './Body';
 
 function App() {
   return (
     <div>
       <header>
-        <Component/>
+        <Header />
       </header>
-      <body>
-      </body>
+      <main>
+        <Body />
+      </main>
     </div>
   );
 }
