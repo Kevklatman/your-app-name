@@ -1,8 +1,12 @@
 function Search(){
-    return(
-        <div>
-            <input type="text" placeholder="...search"/>
+    return (
+        <div className="search-container">
+          <input
+            type="text"
+            className="search-input"
+            placeholder="...search"
+          />
         </div>
-    )
+      );
 }
 export default Search;

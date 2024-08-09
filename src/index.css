@@ -5,7 +5,12 @@ header{
 }
 
 h1{
-    font-weight: bolder;
+    font-weight:550;
+    font-family: 'Courier New', Courier, monospace;
+}
+h2{
+    font-family: 'Courier New', Courier, monospace;
+    font-weight:550;
 }
 .characters {
     max-width: 1200px;
@@ -21,8 +26,24 @@ h1{
   
   .image-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-template-columns: repeat(4, 1fr);
     grid-gap: 20px;
+  }
+  
+  .image-grid > div {
+    text-align: center;
+  }
+  
+  .image-grid img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 5px;
+  }
+  
+  .image-grid p {
+    margin-top: 10px;
+    font-size: 14px;
   }
   
   .character {
@@ -42,4 +63,17 @@ h1{
   .character p {
     font-size: 18px;
     font-weight: bold;
+  }
+  .search-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .search-input {
+    width: 200px;
+    padding: 8px;
+    font-size: 16px;
+    text-align: center;
   }
