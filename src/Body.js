@@ -4,16 +4,15 @@ import Search from "./Search";
 
 function Body() {
   const characters = data.characters;
-  const [hoveredQuote, setHoveredQuote] = useState(""); // State to hold the quote of the hovered character
-
-  // Function to find a random quote for a given character
+  const [hoveredQuote, setHoveredQuote] = useState(""); 
+ 
   const getRandomQuote = (characterId) => {
     const quotes = data.quotes.filter(quote => quote.character._id === characterId);
     if (quotes.length > 0) {
       const randomIndex = Math.floor(Math.random() * quotes.length);
-      setHoveredQuote(quotes[randomIndex].content); // Update the state with a random quote
+      setHoveredQuote(quotes[randomIndex].content); 
     } else {
-      setHoveredQuote(""); // No quotes found for this character
+      setHoveredQuote(""); 
     }
   };
 
