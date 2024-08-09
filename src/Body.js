@@ -2,17 +2,17 @@ import React, { useState } from "react";
 import data from './db.json';
 import Search from "./Search";
 
-function Body() {
+function Body({characterQuotes}) {
   const characters = data.characters;
-  const [hoveredQuote, setHoveredQuote] = useState(""); 
- 
+  const [hoveredQuote, setHoveredQuote] = useState("");
+  
   const getRandomQuote = (characterId) => {
-    const quotes = data.quotes.filter(quote => quote.character._id === characterId);
-    if (quotes.length > 0) {
+    const quotes = characterQuotes[characterId];
+    if (quotes && quotes.length > 0) {
       const randomIndex = Math.floor(Math.random() * quotes.length);
-      setHoveredQuote(quotes[randomIndex].content); 
+      setHoveredQuote(quotes[randomIndex].content);
     } else {
-      setHoveredQuote(""); 
+      setHoveredQuote("");
     }
   };
 
