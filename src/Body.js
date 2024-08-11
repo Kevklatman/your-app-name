@@ -23,6 +23,16 @@ function Body({ characterQuotes }) {
     setSelectedCharacter(character);
   };
 
+  if (selectedCharacter) {
+    return (
+      <CharacterDetails
+        character={selectedCharacter}
+        quotes={characterQuotes[selectedCharacter._id] || []}
+        onBackClick={() => setSelectedCharacter(null)}
+      />
+    );
+  }
+
   return (
     <div>
       <h2>Characters</h2>
@@ -46,13 +56,6 @@ function Body({ characterQuotes }) {
           </div>
         ))}
       </div>
-      {selectedCharacter && (
-        <CharacterDetails
-          character={selectedCharacter}
-          quotes={characterQuotes[selectedCharacter._id] || []}
-          onBackClick={() => setSelectedCharacter(null)}
-        />
-      )}
     </div>
   );
 }
